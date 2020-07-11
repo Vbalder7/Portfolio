@@ -1,0 +1,28 @@
+import random
+def rps():
+    options = ["Rock", "Paper", "Scissors"]
+
+    C1 = "Rock"
+    C2 = "Paper"
+    C3 = "Scissors"
+
+    Prompt = input("Choose Rock, Paper, or Scissors:  ")
+    Bot_choice = random.choice(options)
+
+    print("I chose " + Bot_choice + " and you chose " + Prompt + "!")
+
+    while options == options:
+        if Bot_choice == C1 and Prompt == C2 or Bot_choice == C2 and Prompt == C3 or Bot_choice == C3 and Prompt == C1:
+            print("therefore you have won!")
+            break
+        elif Bot_choice == C2 and Prompt == C2 or Bot_choice == C3 and Prompt == C3 or Bot_choice == C1 and Prompt == C1:
+            print("therefore we have tied!")
+            break
+        elif Bot_choice == C1 and Prompt == C3 or Bot_choice == C2 and Prompt == C1 or Bot_choice == C3 and Prompt == C2:
+            print("therefore you have lost!")
+            break
+        else:
+            print("Game has ended because we did not understand your choice! :(")
+            Prompt = input("Choose Rock, Paper, or Scissors:  ")
+
+rps()
